@@ -29,10 +29,10 @@ namespace WebApp.Models
         public void MockPersonRepo()
         {
             CreatePersonViewModel newPerson = new CreatePersonViewModel();
-            newPerson.CreatePerson("Salman Yahya", "+469564555", "Göteborg");
-            newPerson.CreatePerson("Johan Eriskberg", "+46956001", "Malmö");
-            newPerson.CreatePerson("Peters Malmborg", "+479777755", "Stockholm");
-            newPerson.CreatePerson("Sandra Johansson", "+479777755", "Stockholm");
+            newPerson.CreatePerson("Salman Yahya", "+469254555", "Göteborg");
+            newPerson.CreatePerson("Johan Eriskberg", "+424556001", "Malmö");
+            newPerson.CreatePerson("Peters Malmborg", "+479547755", "Stockholm");
+            newPerson.CreatePerson("Sandra Johansson", "+474588885", "Stockholm");
         }
 
         public Person CreatePerson(string name, string phoneNumber, string city)
