@@ -1,0 +1,26 @@
+﻿@{ 
+    ViewData["Title"] = "Ajax Person Page"; 
+ }
+
+<div class="container">
+
+    <h1>@ViewData["Title"]</h1>
+    <br />
+    <div>
+        <div class="row">
+            <div>
+                <div class="btn-group-lg">
+                    <input type="button" class="btn btn-info" onclick="GetPersonList()" value="See peoples List" />
+                    <div class="btn-group-lg accordion-button">
+                        <label for="personId" class="fw-bold ">Person Id : </label>
+                        <input id="personIdValue" type="number" />
+                        <input type="button" class="btn btn-link " onclick="FindPersonById()" value="Find Person" />
+                        <input type="button" class="btn btn-danger " onclick="RemovePersonById()" value="Delete Person By Id" />
+                    </div>
+                </div>
+                <div class="fw-bold font-monospace" id="messages"></div>
+            </div>
+                <div id="ListOfPerson"></div>
+        </div>
+    </div>
+</div>

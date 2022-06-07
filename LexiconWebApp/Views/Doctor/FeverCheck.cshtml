@@ -1,0 +1,29 @@
+﻿
+@model FeverCheckerModel
+
+@{
+    ViewBag.Title = "Check Your temperature";
+}
+
+<br><h1>@ViewBag.Title </h1><br>
+<br />
+<h3>What is your temperature right now </h3><br>
+<p>
+    The average temperature has traditionally been defined as 37 C. Your body temperature dropped to below 34 degree means you may have hypothermia. 
+    A temperature taken using a mouth thermometer (oral temperature) that's 37.8 C or higher is generally considered to be a fever.
+</p>
+
+@if (ViewBag.message == null)
+{
+    <form asp-controller="Doctor" asp-action="FeverCheck" method="post">
+
+        <label>Your temperature : </label>
+        <input type="number" Name="temperature" />
+        <input type="submit" value="Check" />
+    </form>
+}
+else
+{
+    <p>@ViewBag.message</p>
+}
+

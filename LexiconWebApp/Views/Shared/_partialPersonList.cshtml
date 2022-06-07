@@ -1,0 +1,16 @@
+﻿@model Person
+
+<div class="row row-cols-md-5 justify-content-md-between" style="border:1px dashed black;">
+
+            
+            <div class="col-md "> @Model.Id </div>
+            <div class="col-md"> @Model.Name</div>
+            <div class="col-md">@Model.PhoneNumber</div>
+            <div class="col-md"> @Model.City</div>
+            <div class="col-md">
+                <a class="btn btn-danger btn-sm fw-bold float-start" onclick="location.href =
+                    '@Url.Action("DeletePerson","People", new{ id= @Model.Id})'">Delete</a>
+            </div>
+       
+</div>
+

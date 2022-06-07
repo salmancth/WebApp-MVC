@@ -1,0 +1,37 @@
+﻿
+@model List<Person>
+
+
+<div class="container">
+    <div class="row row-cols-md-5 justify-content-md-between">
+
+        <div class="col-lg"><b> #</b></div>
+        <div class="col-bold">
+            <b>Name</b>
+        </div>
+        <div class="col-bold">
+            <b>Phone Number</b>
+        </div>
+        <div class="col-bold">
+            <b> City</b>
+        </div>
+        <div class="col-bold"><b>Action</b></div>
+    </div>
+</div>
+
+<div class="row row-cols-md-5 justify-content-md-between" style="border:1px dashed black;">
+    @{ foreach (Person person in Model)
+        {
+
+            <div class="col-md "> @person.Id </div>
+            <div class="col-md"> @person.Name</div>
+            <div class="col-md">@person.PhoneNumber</div>
+            <div class="col-md"> @person.City</div>
+            <div class="col-md">
+                <a class="btn btn-danger btn-sm fw-bold float-start" onclick="location.href =
+                    '@Url.Action("DeletePerson","People", new{ id= person.Id})'">Delete</a>
+            </div>
+        } }
+</div>
+
+
